@@ -61,14 +61,14 @@ done
 #######################
 # Save session cookie #
 #######################
-wget --save-cookies=/home/see/NMSeePlusv4.2_env/Cookie/zabbix.cookie -4 --keep-session-cookies -q -O "/dev/null" --post-data='name=Admin&password=zabbix&enter=Sign in&autologin=1&request=' 'http://10.81.244.56/zabbix/index.php?login=1' > /dev/null
+wget --save-cookies=/home/see/NMSeePlusv4.2_env/Cookie/zabbix.cookie -4 --keep-session-cookies -q -O "/dev/null" --post-data='name=Admin&password=zabbix&enter=Sign in&autologin=1&request=' 'http://192.168.1.0/zabbix/index.php?login=1' > /dev/null
 
 ####################################################################################################################################################
 # Load saved cookie and search Utilizations'CPU graphs from Zabbix web with the month period specified. It is necessary adjusting images directory #
 ####################################################################################################################################################
-wget -4 --load-cookies=/home/see/NMSeePlusv4.2_env/Cookie/zabbix.cookie -q -O $cpu_imagedir "http://10.81.244.56/zabbix/chart2.php?graphid=$cpu_graphid&period=$result&stime=$stime&isNow=0&profileIdx=web.graphs&profileIdx2=794&width=1462&sid=155b9d076cfee3f3&screenid" > /dev/null
+wget -4 --load-cookies=/home/see/NMSeePlusv4.2_env/Cookie/zabbix.cookie -q -O $cpu_imagedir "http://192.168.1.0/zabbix/chart2.php?graphid=$cpu_graphid&period=$result&stime=$stime&isNow=0&profileIdx=web.graphs&profileIdx2=794&width=1462&sid=155b9d076cfee3f3&screenid" > /dev/null
 
 ####################################################################################################################################################
 # Load saved cookie and search Available Memory graphs from Zabbix web with the month period specified. It is necessary adjusting images directory #
 ####################################################################################################################################################
-wget -4 --load-cookies=/home/see/NMSeePlusv4.2_env/Cookie/zabbix.cookie -q -O $mem_imagedir "http://10.81.244.56/zabbix/chart2.php?graphid=$mem_graphid&period=$result&stime=$stime&isNow=0&profileIdx=web.graphs&profileIdx2=794&width=1462&sid=155b9d076cfee3f3&screenid" > /dev/null
+wget -4 --load-cookies=/home/see/NMSeePlusv4.2_env/Cookie/zabbix.cookie -q -O $mem_imagedir "http://192.168.1.0/zabbix/chart2.php?graphid=$mem_graphid&period=$result&stime=$stime&isNow=0&profileIdx=web.graphs&profileIdx2=794&width=1462&sid=155b9d076cfee3f3&screenid" > /dev/null

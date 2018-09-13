@@ -22,7 +22,7 @@ import smtplib
 #################################################################
 # Declaration of credentials variables and values of Zabbix Web #
 #################################################################
-ZABBIX_SERVER='http://10.81.244.56/zabbix'
+ZABBIX_SERVER='http://192.168.1.0/zabbix'
 ZUSER='Admin'
 ZPASS='zabbix'
 
@@ -414,7 +414,7 @@ def pdf_report():
 ################################
 def sendemail():
     email_login = 'relatorio.automatico.seepe@gmail.com'
-    senha = '741852963369258147'
+    senha = 'hereisthepassword'
     send_mail_to = 'erickmarllon10@gmail.com'
     caminho_arquivo = filepdf
     smtp_server = 'smtp.gmail.com'

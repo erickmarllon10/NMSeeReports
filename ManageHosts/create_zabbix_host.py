@@ -5,7 +5,7 @@ import sys
 from zabbix_api import ZabbixAPI
 
 def createhost():
-    zapi = ZabbixAPI(server="http://10.10.10.4")
+    zapi = ZabbixAPI(server="http://192.168.1.0")
     zapi.login("Admin", "zabbix")
     zabbixhost = raw_input("Defina o nome do host: ")
     zabbixhostip = raw_input("Digite o ip do host %s: "%zabbixhost)
